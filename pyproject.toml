@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cad"
+version = "0.0.1"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+log_cli = true
+testpaths = [
+    # "cad",
+    "symgrad",
+]
+log_format =  "%(levelname)s: %(filename)s:%(lineno)s %(message)s"
+python_files = ["*_tests.py", "*_test.py"]
+
+[tool.black]
+line-length = 100
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.setuptools.packages.find]
+include = ["cad", "symgrad"]
+# namespaces = false
+
+[tool.pyright]
+reportShadowedImports = false
+reportUnusedExpression = false

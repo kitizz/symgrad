@@ -1,0 +1,29 @@
+# See README.md for how to deploy and develop.
+
+name: cad
+channels:
+  - conda-forge
+  - orbingol
+  - nodefaults
+dependencies:
+  - python=3.11
+  - black
+  - cachetools
+  - geomdl
+  - ipykernel
+  - ipympl
+  - jupyter
+  - k3d
+  - matplotlib
+  - mpmath # For experimenting with Polynomial eval precision
+  - multimethod
+  # - nptyping
+  # - numba
+  - numpy
+  - pandas
+  - prettytable
+  - pytest
+  - pytest-benchmark
+  # - scipy
+  - sympy
+  # - typeguard
